@@ -105,7 +105,7 @@ export class PdfPreview extends Disposable {
       return webview.asWebviewUri(uri);
     };
 
-    const config = vscode.workspace.getConfiguration('pdf-preview');
+    const config = vscode.workspace.getConfiguration('pdfmore');
     const settings = {
       cMapUrl: resolveAsUri('lib', 'web', 'cmaps/').toString(),
       path: docPath.toString(),
@@ -153,6 +153,9 @@ export class PdfPreview extends Disposable {
       'web',
       'viewer.mjs'
     )}" type="module"></script>
+<script type="module">
+
+</script>
 <script src="${resolveAsUri('lib', 'main.js')}" type="module"></script>
 
 <style> ${themeStyleText} </style>
