@@ -158,7 +158,6 @@ export class PdfPreview extends Disposable {
 </script>
 <script src="${resolveAsUri('lib', 'main.js')}" type="module"></script>
 
-<style> ${themeStyleText} </style>
 </head>`;
 
     const body = `<body tabindex="0">
