@@ -1,0 +1,101 @@
+// VSCode theme variables
+@bg: var(--vscode-editor-background);
+@fg: var(--vscode-editor-foreground);
+@hover-bg: var(--vscode-inputOption-hoverBackground);
+@active-bg: var(--vscode-inputOption-activeBackground);
+@active-fg: var(--vscode-inputOption-activeForeground);
+@button-fg: var(--vscode-button-foreground);
+@button-bg: var(--vscode-button-background);
+
+.theme-colors {
+  body& {
+    background-color: @bg;
+    color: @fg;
+  }
+
+  #toolbarContainer {
+    box-shadow: none;
+    border-bottom: none;
+  }
+
+  #toolbarContainer,
+  #toolbarSidebar,
+  #findbar,
+  .dropdownToolbarButton > select,
+  .toolbarField,
+  .toolbarLabel {
+    background-color: @bg;
+    color: @fg;
+  }
+
+  .toolbarButton {
+    &::before {
+      background-color: @fg;
+    }
+
+    &:is(:hover, :focus-visible) {
+      background-color: @hover-bg;
+
+      &::before {
+        background-color: @fg;
+      }
+    }
+
+    &.toggled {
+      background-color: @active-bg;
+
+      &::before {
+        background-color: @active-fg;
+      }
+    }
+  }
+
+  #themeSwitcher {
+    color: @fg;
+    background-color: @bg;
+
+    &:is(:hover, :focus-visible) {
+      background-color: @hover-bg;
+    }
+  }
+
+  .toggleButton:is(:hover,:has( > input:focus-visible)) {
+    color: @active-fg;
+    background-color: @active-bg;
+  }
+
+  .pdfViewer .page {
+    background-color: @bg;
+    color: @fg;
+    filter: invert(100%);
+  }
+
+  #outerContainer .treeItem > a {
+    color: @fg;
+  }
+
+  .splitToolbarButtonSeparator {
+    border-left-color: @fg;
+  }
+
+  @media (max-width: 840px) {
+    #sidebarContainer {
+      background-color: @bg;
+      color: @fg;
+    }
+  }
+
+  .doorHanger, .doorHangerRight {
+    box-shadow: 0 1px 5px @fg, 0 0 0 1px @fg;
+  }
+
+
+}
+
+#themeSwitcher {
+  cursor: button;
+
+  &:is(:hover, :focus-visible) {
+    background-color: var(--button-hover-color);
+  }
+}

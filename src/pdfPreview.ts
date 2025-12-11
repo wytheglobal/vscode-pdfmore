@@ -1,8 +1,9 @@
 import * as path from 'path';
 import * as vscode from 'vscode';
 import { Disposable } from './disposable';
-import { themeStyleText } from './style/theme';
-import { bodyStr } from './html/body';
+import { bodyStr } from './entry/html_body_tmpl';
+import { writeFileExample } from './utils/fs';
+import { parseUrl } from './utils';
 
 function escapeAttribute(value: string | vscode.Uri): string {
   return value.toString().replace(/"/g, '&quot;');
@@ -40,6 +41,19 @@ export class PdfPreview extends Disposable {
             );
             break;
           }
+          case 'function-call': {
+            const { method, params } = message.data;
+            switch (method) {
+              case 'download': {
+                const { filename, data, url } = params;
+                const location = parseUrl(url);
+                writeFileExample(location.pathname, Buffer.from(data));
+                // write data to file
+                break;
+              }
+            }
+            break;
+          }
         }
       })
     );
@@ -61,6 +75,9 @@ export class PdfPreview extends Disposable {
     );
     this._register(
       watcher.onDidChange((e) => {
+        // TODO: find better way to reload the pdf
+        // current will flush out annotations
+        return;
         if (e.toString() === this.resource.toString()) {
           this.reload();
         }
@@ -157,12 +174,12 @@ export class PdfPreview extends Disposable {
 
 </script>
 <script src="${resolveAsUri('lib', 'main.js')}" type="module"></script>
-
-<style> ${themeStyleText} </style>
+<script src="${resolveAsUri('dist', 'script_prepend_body.js')}"></script>
 </head>`;
 
     const body = `<body tabindex="0">
       ${bodyStr}
+      <script src="${resolveAsUri('dist', 'script_append_body.js')}"></script>
     </body>`;
 
     const tail = ['</html>'].join('\n');
