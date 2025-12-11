@@ -9,7 +9,9 @@ v1.0.2 2025-12-11
 
 Display and modify pdf in VSCode.
 
-![screenshot](https://user-images.githubusercontent.com/3643499/84454816-98fcd600-ac96-11ea-822c-3ae1e1599a13.gif)
+![screenshot](https://raw.githubusercontent.com/wytheglobal/vscode-pdfmore/420cc03be2219c6e11d8e54547f212c84debb4bc/docs/images/edit.png)
+
+![screenshot](https://github.com/wytheglobal/vscode-pdfmore/blob/420cc03be2219c6e11d8e54547f212c84debb4bc/docs/images/dark-theme.png?raw=true)
 
 ## Contribute
 
