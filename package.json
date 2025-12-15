@@ -1,8 +1,8 @@
 {
   "name": "pdfmore",
   "displayName": "pdfmore",
-  "description": "Display pdf file in VSCode.",
-  "version": "1.0.2",
+  "description": "Display and modify pdf file in VSCode. Support dark theme mode.",
+  "version": "2.0.0",
   "publisher": "wytheglobal",
   "engines": {
     "vscode": "^1.46.0"
@@ -13,7 +13,8 @@
   "keywords": [
     "pdf",
     "viewer",
-    "pdfmore"
+    "pdfmore",
+    "editor"
   ],
   "icon": "vscode-pdfmore.png",
   "repository": {
@@ -99,6 +100,7 @@
     "test": "node ./out/test/runTest.js",
     "lint": "eslint -c .eslintrc.json --ext .ts ./src",
     "package": "vsce package",
+    "publish": "vsce publish",
     "dev": "rollup -c rollup.config.mjs --watch"
   },
   "dependencies": {

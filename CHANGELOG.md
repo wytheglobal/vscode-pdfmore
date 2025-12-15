@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.0 (2025-12-11)
+- update PDF.js to latest version 5.4.449.
+- support modify pdf and save feature.
+- support dark theme mode.
+
 ## 1.2.2 (2022/12/23)
 
 - Fix about rendering Unicode characters
