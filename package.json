@@ -2,7 +2,7 @@
   "name": "pdfmore",
   "displayName": "pdfmore",
   "description": "Display and modify pdf file in VSCode. Support dark theme mode.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "publisher": "wytheglobal",
   "engines": {
     "vscode": "^1.46.0"

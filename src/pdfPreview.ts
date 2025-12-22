@@ -75,9 +75,6 @@ export class PdfPreview extends Disposable {
     );
     this._register(
       watcher.onDidChange((e) => {
-        // TODO: find better way to reload the pdf
-        // current will flush out annotations
-        return;
         if (e.toString() === this.resource.toString()) {
           this.reload();
         }

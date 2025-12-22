@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.1.0 
+- add auto-refresh feature when file changes
+
 ## 2.0.0 (2025-12-11)
 - update PDF.js to latest version 5.4.449.
 - support modify pdf and save feature.
