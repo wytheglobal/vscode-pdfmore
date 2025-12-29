@@ -2,11 +2,11 @@
 
 Display and modify PDF files in VSCode with the latest PDF.js library. Supports dark theme mode.
 
-## Change Log 
-v1.0.2 2025-12-11
-1. update PDF.js to latest version 5.4.449.
-2. support modify pdf and save feature.
-3. support dark theme mode.
+## Core Features
+
+1. **PDF.js Integration**: Utilizes the latest PDF.js library (version 5.4.449) for robust PDF rendering and manipulation capabilities.
+2. **PDF Editing & Persistence**: Provides comprehensive PDF modification capabilities with seamless save functionality, enabling users to edit and preserve changes to their documents.
+3. **Dark Mode Support**: Features a fully integrated dark theme mode for enhanced visual comfort and reduced eye strain during extended viewing sessions.
 
 
 ![screenshot](https://raw.githubusercontent.com/wytheglobal/vscode-pdfmore/420cc03be2219c6e11d8e54547f212c84debb4bc/docs/images/edit.png)
