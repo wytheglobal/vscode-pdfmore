@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.5
+- auto detect theme and toggle dark theme
+- rember users last theme choice
+
 ## 2.1.0 
 - add auto-refresh feature when file changes
 
