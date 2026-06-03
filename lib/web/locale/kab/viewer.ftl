@@ -598,6 +598,8 @@ pdfjs-editor-edit-comment-popup-button =
 pdfjs-editor-delete-comment-popup-button-label = Kkes awennit
 pdfjs-editor-delete-comment-popup-button =
     .title = Kkes awennit
+pdfjs-show-comment-button =
+    .title = Sken awennit
 
 ##  Edit a comment dialog
 
@@ -608,11 +610,6 @@ pdfjs-editor-edit-comment-dialog-title-when-adding = Rnu awennit
 pdfjs-editor-edit-comment-dialog-text-input =
     .placeholder = Bdu tira...
 pdfjs-editor-edit-comment-dialog-cancel-button = Sefsex
-
-## Edit a comment button in the editor toolbar
-
-pdfjs-editor-edit-comment-button =
-    .title = Ẓreg awennit
 
 ## Main menu for adding/removing signatures
 
