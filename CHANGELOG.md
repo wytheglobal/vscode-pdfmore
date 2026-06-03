@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.1.6
+- fix windows system can't save pdf file bug.
+
 ## 2.1.5
 - auto detect theme and toggle dark theme
 - rember users last theme choice

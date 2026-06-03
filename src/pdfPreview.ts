@@ -2,8 +2,6 @@ import * as path from 'path';
 import * as vscode from 'vscode';
 import { Disposable } from './disposable';
 import { bodyStr } from './entry/html_body_tmpl';
-import { writeFileExample } from './utils/fs';
-import { parseUrl } from './utils';
 
 function escapeAttribute(value: string | vscode.Uri): string {
   return value.toString().replace(/"/g, '&quot;');
@@ -45,10 +43,17 @@ export class PdfPreview extends Disposable {
             const { method, params } = message.data;
             switch (method) {
               case 'download': {
-                const { filename, data, url } = params;
-                const location = parseUrl(url);
-                writeFileExample(location.pathname, Buffer.from(data));
-                // write data to file
+                const { data } = params;
+                vscode.workspace.fs.writeFile(resource, Buffer.from(data)).then(
+                  () =>
+                    vscode.window.showInformationMessage(
+                      'File written successfully!'
+                    ),
+                  (error) =>
+                    vscode.window.showErrorMessage(
+                      `Error writing file: ${error.message}`
+                    )
+                );
                 break;
               }
             }
@@ -130,6 +135,7 @@ export class PdfPreview extends Disposable {
         scrollMode: config.get('default.scrollMode') as string,
         spreadMode: config.get('default.spreadMode') as string,
       },
+      workerSrc: resolveAsUri('lib', 'build', 'pdf.worker.mjs').toString(),
     };
 
     const head = `<!DOCTYPE html>
@@ -162,6 +168,7 @@ export class PdfPreview extends Disposable {
   )}';
   console.log("tomwang 1111", pdfjsLib.GlobalWorkerOptions.workerSrc)
 </script>
+
 <script src="${resolveAsUri(
       'lib',
       'web',
