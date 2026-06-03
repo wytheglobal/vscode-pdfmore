@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.1.7
+- upgrade pdfjs to latest 6.0.227 version
+
 ## 2.1.6
 - fix windows system can't save pdf file bug.
 

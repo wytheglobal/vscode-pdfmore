@@ -4,7 +4,7 @@ Display and modify PDF files in VSCode with the latest PDF.js library. Supports 
 
 ## Core Features
 
-1. **PDF.js Integration**: Utilizes the latest PDF.js library (version 5.4.449) for robust PDF rendering and manipulation capabilities.
+1. **PDF.js Integration**: Utilizes the latest PDF.js library (version 6.0.227) for robust PDF rendering and manipulation capabilities.
 2. **PDF Editing & Persistence**: Provides comprehensive PDF modification capabilities with seamless save functionality, enabling users to edit and preserve changes to their documents.
 3. **Dark Mode Support**: Features a fully integrated dark theme mode for enhanced visual comfort and reduced eye strain during extended viewing sessions.
 
@@ -30,6 +30,8 @@ Display and modify PDF files in VSCode with the latest PDF.js library. Supports 
       kind: OptionKind.VIEWER
     },
     ```
+1. Apply download method modification to ./lib/web/viewer.mjs:
+
 
 ## Change log
 See [CHANGELOG.md](CHANGELOG.md).
